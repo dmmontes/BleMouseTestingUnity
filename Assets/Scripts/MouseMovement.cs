@@ -172,7 +172,7 @@ public class MouseMovement : MonoBehaviour
         bool moved = false;
         if (mousePos.y < mousePos_.y )
         {
-            Debug.Log("Mouse moved DOWN. Units: " + (mousePos_.y - mousePos.y));
+            Debug.Log("Mouse moved DOWN. Units: " + (int)(mousePos_.y - mousePos.y));
             downArrowOn_.SetActive(true);
             downArrowOff_.SetActive(false);
             upArrowOn_.SetActive(false);
@@ -181,7 +181,7 @@ public class MouseMovement : MonoBehaviour
         }
         else if (mousePos.y > mousePos_.y)
         {
-            Debug.Log("Mouse moved UP. Units: " + (mousePos.y - mousePos_.y));
+            Debug.Log("Mouse moved UP. Units: " + (int)(mousePos.y - mousePos_.y));
             downArrowOn_.SetActive(false);
             downArrowOff_.SetActive(true);
             upArrowOn_.SetActive(true);
@@ -206,7 +206,7 @@ public class MouseMovement : MonoBehaviour
         bool moved = false;
         if (mousePos.x > mousePos_.x)
         {
-            Debug.Log("Mouse moved RIGHT. Units: " + (mousePos.x - mousePos_.x));
+            Debug.Log("Mouse moved RIGHT. Units: " + (int)(mousePos.x - mousePos_.x));
             rightArrowOn_.SetActive(true);
             rightArrowOff_.SetActive(false);
             leftArrowOn_.SetActive(false);
@@ -215,7 +215,7 @@ public class MouseMovement : MonoBehaviour
         }
         else if (mousePos.x < mousePos_.x)
         {
-            Debug.Log("Mouse moved LEFT. Units: " + (mousePos_.x - mousePos.x));
+            Debug.Log("Mouse moved LEFT. Units: " + (int)(mousePos_.x - mousePos.x));
             rightArrowOn_.SetActive(false);
             rightArrowOff_.SetActive(true);
             leftArrowOn_.SetActive(true);
