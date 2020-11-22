@@ -73,8 +73,8 @@ public class MenuOverlay : MonoBehaviour
 		{
 		// Show Quick Start once on application startup
 
-		if (quickStart != null && vehicle != null && vehicle.isActiveAndEnabled)
-			quickStart.SetActive(true);
+		// if (quickStart != null && vehicle != null && vehicle.isActiveAndEnabled)
+		// 	quickStart.SetActive(true);
 		}
 
 
