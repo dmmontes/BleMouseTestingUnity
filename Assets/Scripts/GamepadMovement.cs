@@ -25,6 +25,12 @@ public class GamepadMovement : MonoBehaviour
         checkSpecialFunctions();
         checkCamera();
     }
+
+    public string TextKey1 = ""; ///< Message representing the action done when key 1 is pressed
+    public string TextKey2 = ""; ///< Message representing the action done when key 2 is pressed
+    public string TextKey3 = ""; ///< Message representing the action done when key 3 is pressed
+    public string TextKeyC = ""; ///< Message representing the action done when key C is pressed
+    public string TextKeySpace = ""; ///< Message representing the action done when key Space is pressed
     
     private
 
@@ -79,40 +85,39 @@ public class GamepadMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if a special function key (key 1, 2 or 3) has been pressed
+    /// Check if a special function key (key 1, 2, 3, C or Space) has been pressed
     /// </summary>
     void checkSpecialFunctions()
     {
         // Check key 1
-        bool key1Pressed = false;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            key1Pressed = true;
+            Debug.Log("Key 1 pressed: " + TextKey1 + " (Button 1)"); 
         }
             
         // Check key 2
-        bool key2Pressed = false;
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            key2Pressed = true;
+            Debug.Log("Key 2 pressed: " + TextKey2 + " (Button 2)"); 
         }
             
         // Check key 3
-        bool key3Pressed = false;
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            key3Pressed = true;
+            Debug.Log("Key 3 pressed: " + TextKey3 + " (Joystick Button)"); 
         }
-
-        // Print if there is a move
-        if (key1Pressed || key2Pressed || key3Pressed)
+            
+        // Check key C
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("Special functions: key(s) pressed: " +
-                     (key1Pressed ? "1 HandBrake (Button 1), " : "") + 
-                     (key2Pressed ? "2 Slow Motion (Button 2), " : "") +
-                     (key3Pressed ? "3 Change camera (Joystick button), " : ""));
+            Debug.Log("Key C pressed: " + TextKeyC + " (Accelerometer Crouch/Standup)"); 
         }
-
+            
+        // Check key Space
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space pressed: " + TextKeySpace + " (Accelerometer Jump)"); 
+        }
     }
 
     /// <summary>

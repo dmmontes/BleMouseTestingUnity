@@ -10,8 +10,8 @@ public class MouseLookScript : MonoBehaviour {
 	 * Hiding the cursor.
 	 */
 	void Awake(){
-		Cursor.lockState = CursorLockMode.Locked;
-		myCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+		// Cursor.lockState = CursorLockMode.Locked;
+		// myCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
 	}
 
 	/*
@@ -22,10 +22,10 @@ public class MouseLookScript : MonoBehaviour {
 
 		MouseInputMovement();
 
-		if (Input.GetKeyDown (KeyCode.L)) {
-			Cursor.lockState = CursorLockMode.Locked;
+		// if (Input.GetKeyDown (KeyCode.L)) {
+		// 	Cursor.lockState = CursorLockMode.Locked;
 
-		}
+		// }
 		deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
 
 		if(GetComponent<PlayerMovementScript>().currentSpeed > 1)
@@ -71,7 +71,7 @@ void FixedUpdate(){
 	/*
 	 * Reduxing mouse sensitvity if we are aiming.
 	 */
-	if(Input.GetAxis("Fire2") != 0){
+	if(Input.GetAxis("Fire2Gamepad") != 0){
 		mouseSensitvity = mouseSensitvity_aiming;
 	}
 	else if(GetComponent<PlayerMovementScript>().maxSpeed > 5){
@@ -112,9 +112,9 @@ public float bottomAngleView = -45;
  */
 void MouseInputMovement(){
 
-	wantedYRotation += Input.GetAxis("Mouse X") * mouseSensitvity;
+	wantedYRotation += Input.GetAxis("HorizontalGamepad") * mouseSensitvity;
 
-	wantedCameraXRotation -= Input.GetAxis("Mouse Y") * mouseSensitvity;
+	wantedCameraXRotation -= Input.GetAxis("VerticalGamepad") * mouseSensitvity;
 
 	wantedCameraXRotation = Mathf.Clamp(wantedCameraXRotation, bottomAngleView, topAngleView);
 

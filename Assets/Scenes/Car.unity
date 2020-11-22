@@ -7662,7 +7662,7 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 175163781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1372166875
+--- !u!114 &1372166872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7671,9 +7671,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372166869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2747c558d95fe74ca65a7bf99643640, type: 3}
+  m_Script: {fileID: 11500000, guid: ad9813bcde80a2440acdd6c0625ec35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextKey1: Hand Brake
+  TextKey2: Slow Motion
+  TextKey3: Change Camera
+  TextKeyC: Not Defined Action
+  TextKeySpace: Not Defined Action
 --- !u!224 &1378661399 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6354995731426297257, guid: 99803e1fd8019b4478e540c67daac071,

@@ -21,6 +21,11 @@ TagManager:
   - LeftArrowOff
   - ScrollUp
   - ScrollDown
+  - LevelPart
+  - Dummie
+  - SecondCamera
+  - BulletSpawn
+  - Weapon
   layers:
   - Default
   - TransparentFX
