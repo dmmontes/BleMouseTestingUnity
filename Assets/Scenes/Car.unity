@@ -7804,6 +7804,14 @@ PrefabInstance:
       propertyPath: free.verticalAxis
       value: VerticalGamepad
       objectReference: {fileID: 0}
+    - target: {fileID: 11499500, guid: 08bcacdc13ed1d648bde90a28ef6ebc5, type: 3}
+      propertyPath: orbit.verticalSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499500, guid: 08bcacdc13ed1d648bde90a28ef6ebc5, type: 3}
+      propertyPath: orbit.horizontalSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08bcacdc13ed1d648bde90a28ef6ebc5, type: 3}
 --- !u!1 &1406577457

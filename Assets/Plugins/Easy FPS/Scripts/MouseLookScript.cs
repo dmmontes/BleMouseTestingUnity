@@ -87,7 +87,6 @@ void FixedUpdate(){
 
 }
 
-
 private float rotationYVelocity, cameraXVelocity;
 [Tooltip("Speed that determines how much camera rotation will lag behind mouse movement.")]
 public float yRotationSpeed, xCameraSpeed;
@@ -106,15 +105,18 @@ public float currentCameraXRotation;
 public float topAngleView = 60;
 [Tooltip("Minimum camera angle.")]
 public float bottomAngleView = -45;
+
+
 /*
  * Upon mouse movenet it increases/decreased wanted value. (not actually moving yet)
  * Clamping the camera rotation X to top and bottom angles.
  */
 void MouseInputMovement(){
 
-	wantedYRotation += Input.GetAxis("HorizontalGamepad") * mouseSensitvity;
+ 	float sense = 0.01f;
+	wantedYRotation += Input.GetAxis("HorizontalGamepad") * sense;
 
-	wantedCameraXRotation -= Input.GetAxis("VerticalGamepad") * mouseSensitvity;
+	wantedCameraXRotation -= Input.GetAxis("VerticalGamepad") * sense;
 
 	wantedCameraXRotation = Mathf.Clamp(wantedCameraXRotation, bottomAngleView, topAngleView);
 

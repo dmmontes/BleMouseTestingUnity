@@ -14,6 +14,7 @@ public class GamepadMovement : MonoBehaviour
     {
         moveTimer_ = 0;
         cameraTimer_ = 0;
+        crouched_ = false;
     }
 
     /// <summary>
@@ -110,7 +111,8 @@ public class GamepadMovement : MonoBehaviour
         // Check key C
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("Key C pressed: " + TextKeyC + " (Accelerometer Crouch/Standup)"); 
+            crouched_ = !crouched_;
+            Debug.Log("Key C pressed: " + TextKeyC + " (Accelerometer " + (crouched_ ? "Crouch" : "Standup") + ")"); 
         }
             
         // Check key Space
@@ -167,4 +169,5 @@ public class GamepadMovement : MonoBehaviour
     float moveTimer_; ///< Timer controlling time until check gamepad's moves
     float cameraTimer_; ///< Timer controlling time until check gamepad's moves
     const float timeToCheckState_ = 0.3f; ///< Timer to check gamepad's states
+    bool crouched_ ; ///< Indicates if character is crouched;
 }
