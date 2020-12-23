@@ -16163,6 +16163,11 @@ PrefabInstance:
       propertyPath: vehicle
       value: 
       objectReference: {fileID: 1799665138}
+    - target: {fileID: 8756014728399481206, guid: e16a38f021dad6241a9d0b65b66702c6,
+        type: 3}
+      propertyPath: escapeKey
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 8756014728399481207, guid: e16a38f021dad6241a9d0b65b66702c6,
         type: 3}
       propertyPath: m_LocalPosition.x
