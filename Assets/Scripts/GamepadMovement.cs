@@ -15,6 +15,7 @@ public class GamepadMovement : MonoBehaviour
         moveTimer_ = 0;
         cameraTimer_ = 0;
         crouched_ = false;
+        paused_ = false;
     }
 
     /// <summary>
@@ -31,6 +32,7 @@ public class GamepadMovement : MonoBehaviour
     public string TextKey2 = ""; ///< Message representing the action done when key 2 is pressed
     public string TextKey3 = ""; ///< Message representing the action done when key 3 is pressed
     public string TextKeyC = ""; ///< Message representing the action done when key C is pressed
+    public string TextKeyP = ""; ///< Message representing the action done when key P is pressed
     public string TextKeySpace = ""; ///< Message representing the action done when key Space is pressed
     
     private
@@ -115,6 +117,13 @@ public class GamepadMovement : MonoBehaviour
             Debug.Log("Key C pressed: " + TextKeyC + " (Accelerometer " + (crouched_ ? "Crouch" : "Standup") + ")"); 
         }
             
+        // Check key P
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            paused_ = !paused_;
+            Debug.Log("Key P pressed: " + TextKeyP + " (Voice " + (paused_ ? "Paused" : "Restarted") + ")"); 
+        }
+            
         // Check key Space
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -170,4 +179,5 @@ public class GamepadMovement : MonoBehaviour
     float cameraTimer_; ///< Timer controlling time until check gamepad's moves
     const float timeToCheckState_ = 0.3f; ///< Timer to check gamepad's states
     bool crouched_ ; ///< Indicates if character is crouched;
+    bool paused_ ; ///< Indicates if game is paused;
 }

@@ -248,6 +248,7 @@ MonoBehaviour:
   TextKey2: Aim
   TextKey3: Change Weapon
   TextKeyC: Crouch / StandUp
+  TextKeyP: Not Defined Action
   TextKeySpace: Jump
 --- !u!1 &353669936
 GameObject:

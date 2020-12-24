@@ -7690,6 +7690,7 @@ MonoBehaviour:
   TextKey2: Slow Motion
   TextKey3: Change Camera
   TextKeyC: Not Defined Action
+  TextKeyP: Pause/Restart Game
   TextKeySpace: Not Defined Action
 --- !u!224 &1378661399 stripped
 RectTransform:
